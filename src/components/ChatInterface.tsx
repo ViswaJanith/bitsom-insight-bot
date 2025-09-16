@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { Send, Bot, User, Sparkles } from 'lucide-react';
-import bitsomLogo from '@/assets/bitsom-logo.png';
+import bitsomLogo from '@/assets/bitsom-logo-official.png';
 
 interface Message {
   id: string;
