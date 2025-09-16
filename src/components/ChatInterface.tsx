@@ -91,9 +91,9 @@ const ChatInterface = () => {
       <div className="absolute inset-0 bg-black/20" />
       <Card className="w-full max-w-2xl h-[700px] shadow-card bg-white/95 backdrop-blur-sm border-0 overflow-hidden animate-scale-in relative z-10">
         {/* Header */}
-        <div className="bg-gradient-primary p-6 text-white">
+        <div className="bg-gradient-header p-6 text-white shadow-orange">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-white/20 rounded-full p-2 animate-float">
+            <div className="w-12 h-12 bg-white/20 rounded-full p-2 animate-float border border-bitsom-orange/30">
               <img 
                 src={bitsomLogo} 
                 alt="BITSoM Logo" 
@@ -102,9 +102,9 @@ const ChatInterface = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold">BITSoM RAG Assistant</h1>
-              <p className="text-white/80 text-sm">Alumni Interview Insights</p>
+              <p className="text-bitsom-orange/90 text-sm font-medium">Alumni Interview Insights</p>
             </div>
-            <Sparkles className="ml-auto w-6 h-6 text-white/60 animate-pulse" />
+            <Sparkles className="ml-auto w-6 h-6 text-bitsom-orange animate-pulse" />
           </div>
         </div>
 
@@ -122,8 +122,8 @@ const ChatInterface = () => {
             >
               <div className={`w-10 h-10 rounded-full flex items-center justify-center shadow-md ${
                 message.sender === 'user' 
-                  ? 'bg-bitsom-red text-white' 
-                  : 'bg-primary text-white animate-pulse-glow'
+                  ? 'bg-bitsom-orange text-white shadow-orange' 
+                  : 'bg-bitsom-navy text-white animate-pulse-glow'
               }`}>
                 {message.sender === 'user' ? (
                   <User className="w-5 h-5" />
@@ -134,8 +134,8 @@ const ChatInterface = () => {
               <div
                 className={`max-w-[75%] p-4 rounded-2xl shadow-sm transition-smooth hover:shadow-md ${
                   message.sender === 'user'
-                    ? 'bg-bitsom-red text-white rounded-br-sm'
-                    : 'bg-white text-gray-800 rounded-bl-sm border border-gray-100/50'
+                    ? 'bg-bitsom-orange text-white rounded-br-sm shadow-orange/20'
+                    : 'bg-white text-gray-800 rounded-bl-sm border border-bitsom-navy/10 shadow-primary/10'
                 }`}
               >
                 <p className="text-sm leading-relaxed">{message.text}</p>
@@ -153,32 +153,32 @@ const ChatInterface = () => {
           
           {isTyping && (
             <div className="flex items-start gap-3 animate-slide-up">
-              <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center animate-pulse-glow">
+              <div className="w-10 h-10 rounded-full bg-bitsom-navy text-white flex items-center justify-center animate-pulse-glow shadow-primary">
                 <Bot className="w-5 h-5" />
               </div>
-              <div className="bg-white p-4 rounded-2xl rounded-bl-sm shadow-sm border border-gray-100/50">
-                <div className="flex items-center gap-1">
-                  <span className="text-gray-600 text-sm">Assistant is thinking</span>
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-primary rounded-full animate-typing"></div>
-                    <div className="w-2 h-2 bg-primary rounded-full animate-typing" style={{ animationDelay: '0.2s' }}></div>
-                    <div className="w-2 h-2 bg-primary rounded-full animate-typing" style={{ animationDelay: '0.4s' }}></div>
-                  </div>
+            <div className="bg-white p-4 rounded-2xl rounded-bl-sm shadow-sm border border-bitsom-navy/10">
+              <div className="flex items-center gap-1">
+                <span className="text-gray-600 text-sm">Assistant is thinking</span>
+                <div className="flex gap-1">
+                  <div className="w-2 h-2 bg-bitsom-orange rounded-full animate-typing"></div>
+                  <div className="w-2 h-2 bg-bitsom-orange rounded-full animate-typing" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-2 h-2 bg-bitsom-orange rounded-full animate-typing" style={{ animationDelay: '0.4s' }}></div>
                 </div>
               </div>
+            </div>
             </div>
           )}
         </div>
 
         {/* Input Area */}
-        <div className="p-6 bg-white border-t border-gray-100">
+        <div className="p-6 bg-white border-t border-bitsom-navy/10">
           <div className="flex gap-3">
             <Input
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="Ask about alumni experiences, career paths, or industry insights..."
-              className="flex-1 border-gray-200 focus:border-primary focus:ring-primary/20 rounded-xl px-4 py-3 text-sm transition-smooth"
+              className="flex-1 border-bitsom-navy/20 focus:border-bitsom-orange focus:ring-bitsom-orange/20 rounded-xl px-4 py-3 text-sm transition-smooth"
               disabled={isTyping}
             />
             <Button
@@ -190,9 +190,9 @@ const ChatInterface = () => {
             </Button>
           </div>
           
-          <div className="flex items-center justify-center mt-4 gap-4 text-xs text-gray-500">
+          <div className="flex items-center justify-center mt-4 gap-4 text-xs text-bitsom-navy/60">
             <span className="flex items-center gap-1">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-bitsom-orange rounded-full animate-pulse"></div>
               Connected to Alumni Database
             </span>
             <span>•</span>

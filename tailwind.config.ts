@@ -24,9 +24,13 @@ export default {
           foreground: "hsl(var(--primary-foreground))",
           glow: "hsl(var(--primary-glow))",
         },
-        "bitsom-red": {
-          DEFAULT: "hsl(var(--bitsom-red))",
-          foreground: "hsl(var(--bitsom-red-foreground))",
+        "bitsom-orange": {
+          DEFAULT: "hsl(var(--bitsom-orange))",
+          foreground: "hsl(var(--bitsom-orange-foreground))",
+        },
+        "bitsom-navy": {
+          DEFAULT: "hsl(var(--bitsom-navy))",
+          foreground: "hsl(var(--bitsom-navy-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -67,9 +71,11 @@ export default {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-subtle': 'var(--gradient-subtle)',
         'gradient-chat': 'var(--gradient-chat)',
+        'gradient-header': 'var(--gradient-header)',
       },
       boxShadow: {
         'primary': 'var(--shadow-primary)',
+        'orange': 'var(--shadow-orange)',
         'glow': 'var(--shadow-glow)',
         'card': 'var(--shadow-card)',
       },
