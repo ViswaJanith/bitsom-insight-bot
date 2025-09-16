@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { Send, Bot, User, Sparkles } from 'lucide-react';
 import bitsomLogo from '@/assets/bitsom-logo-official.png';
+import bitsomBackground from '@/assets/bitsom-background.jpg';
 
 interface Message {
   id: string;
@@ -80,8 +81,15 @@ const ChatInterface = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-primary flex items-center justify-center p-4">
-      <Card className="w-full max-w-2xl h-[700px] shadow-card bg-white/95 backdrop-blur-sm border-0 overflow-hidden animate-scale-in">
+    <div className="min-h-screen relative flex items-center justify-center p-4">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bitsomBackground})` }}
+      />
+      {/* Overlay for better readability */}
+      <div className="absolute inset-0 bg-black/20" />
+      <Card className="w-full max-w-2xl h-[700px] shadow-card bg-white/95 backdrop-blur-sm border-0 overflow-hidden animate-scale-in relative z-10">
         {/* Header */}
         <div className="bg-gradient-primary p-6 text-white">
           <div className="flex items-center gap-4">
