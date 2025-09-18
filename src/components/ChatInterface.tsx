@@ -102,7 +102,7 @@ const ChatInterface = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold">BITSoM Insights</h1>
-              <p className="text-bitsom-orange/90 text-sm font-medium">Alumni Interview Assistant</p>
+              <p className="text-bitsom-orange/90 text-sm font-medium">Ask me anything about BITSoM !</p>
             </div>
             <Sparkles className="ml-auto w-6 h-6 text-bitsom-orange animate-pulse" />
           </div>
