@@ -17,7 +17,7 @@ const ChatInterface = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "👋 Hi! I'm your BITSoM Knowledge Assistant. I can help you explore insights from our extensive collection of interview transcripts. Ask me about career paths, industry experiences, or any specific guidance!",
+      text: "👋 Hi! I'm your BITSoM Assistant. I can help you explore insights from our extensive collection of BITSoM Files. Ask me about career paths, courses, industry experiences, or any specific guidance!",
       sender: 'bot',
       timestamp: new Date()
     }
