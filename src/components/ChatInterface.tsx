@@ -193,7 +193,7 @@ const ChatInterface = () => {
           <div className="flex items-center justify-center mt-4 gap-4 text-xs text-bitsom-navy/60">
             <span className="flex items-center gap-1">
               <div className="w-2 h-2 bg-bitsom-orange rounded-full animate-pulse"></div>
-              Connected to Alumni Database
+              Connected to BITSoM Database
             </span>
             <span>•</span>
             <span>{messages.length - 1} queries processed</span>
