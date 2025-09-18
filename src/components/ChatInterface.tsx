@@ -17,7 +17,7 @@ const ChatInterface = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "👋 Hi! I'm your BITSoM Alumni Knowledge Assistant. I can help you explore insights from our extensive collection of alumni interview transcripts. Ask me about career paths, industry experiences, or any specific guidance!",
+      text: "👋 Hi! I'm your BITSoM Knowledge Assistant. I can help you explore insights from our extensive collection of interview transcripts. Ask me about career paths, industry experiences, or any specific guidance!",
       sender: 'bot',
       timestamp: new Date()
     }
@@ -53,11 +53,11 @@ const ChatInterface = () => {
     // Simulate bot response with realistic delay
     setTimeout(() => {
       const botResponses = [
-        `📊 Based on our alumni interviews, here are insights about "${inputValue}": Many of our graduates have found success by leveraging the analytical skills developed at BITSoM. The key is to apply strategic thinking to real-world challenges.`,
-        `🎯 I found relevant alumni experiences about "${inputValue}". Several alumni mentioned the importance of networking and building strong professional relationships during their time at BITSoM.`,
-        `💡 From our interview transcripts regarding "${inputValue}": Alumni consistently highlight the value of practical exposure and case-based learning in their career progression.`,
-        `🚀 Alumni insights on "${inputValue}": The interdisciplinary approach at BITSoM has helped many graduates adapt to changing industry demands and take on leadership roles.`,
-        `📈 Based on our extensive alumni database about "${inputValue}": Many successful graduates emphasize the importance of continuous learning and staying updated with industry trends.`
+        `📊 Based on our interview insights, here are findings about "${inputValue}": Many of our graduates have found success by leveraging the analytical skills developed at BITSoM. The key is to apply strategic thinking to real-world challenges.`,
+        `🎯 I found relevant experiences about "${inputValue}". Several graduates mentioned the importance of networking and building strong professional relationships during their time at BITSoM.`,
+        `💡 From our interview transcripts regarding "${inputValue}": Graduates consistently highlight the value of practical exposure and case-based learning in their career progression.`,
+        `🚀 Graduate insights on "${inputValue}": The interdisciplinary approach at BITSoM has helped many graduates adapt to changing industry demands and take on leadership roles.`,
+        `📈 Based on our extensive database about "${inputValue}": Many successful graduates emphasize the importance of continuous learning and staying updated with industry trends.`
       ];
 
       const randomResponse = botResponses[Math.floor(Math.random() * botResponses.length)];
