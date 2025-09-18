@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BITSoM RAG Assistant - Interview Insights</title>
+    <meta name="description" content="Interactive AI assistant powered by BITSoM interview transcripts. Get career insights and guidance from our extensive database." />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Background Image -->
+        <div class="background-image"></div>
+        <!-- Overlay -->
+        <div class="background-overlay"></div>
+        
+        <!-- Chat Card -->
+        <div class="chat-card">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="header-content">
+                    <div class="logo-container">
+                        <img src="src/assets/bitsom-logo-official.png" alt="BITSoM Logo" class="logo-image">
+                    </div>
+                    <div class="header-text">
+                        <h1>BITSoM Insights</h1>
+                        <p>Ask me anything about BITSoM !</p>
+                    </div>
+                    <div class="sparkles-icon">✨</div>
+                </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-avatar bot-avatar">
+                        <span>🤖</span>
+                    </div>
+                    <div class="message-content bot-content">
+                        <p>👋 Hi! I'm your BITSoM Assistant. I can help you explore insights from our extensive collection of BITSoM Files. Ask me about career paths, courses, industry experiences, or any specific guidance!</p>
+                        <span class="message-time" id="initialTime"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator (hidden by default) -->
+            <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                <div class="message-avatar bot-avatar">
+                    <span>🤖</span>
+                </div>
+                <div class="typing-content">
+                    <span>Assistant is thinking</span>
+                    <div class="typing-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-area">
+                <div class="input-container">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="Ask about experiences, career paths, or industry insights..."
+                        class="message-input"
+                    >
+                    <button id="sendButton" class="send-button">
+                        <span>➤</span>
+                    </button>
+                </div>
+                
+                <div class="status-bar">
+                    <span class="status-item">
+                        <div class="status-dot"></div>
+                        Connected to BITSoM Database
+                    </span>
+                    <span>•</span>
+                    <span id="queryCount">0 queries processed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
